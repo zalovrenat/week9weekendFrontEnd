@@ -21,6 +21,7 @@ const Product = ({ product, user, addToCart }) => {
 
     const handleClick = () => {
         addToCart(product)
+        console.log(product)
         if (user.token) {
             addToCartAPI(product.product_id)
         }

@@ -43,11 +43,12 @@ const App = () => {
     for (let item of newCart) {
       if (item.product_id === product.product_id) {
         item.quantity += 1
-      }
-      else {
-        newCart.push(product)
+        setCart(newCart)
+        return
       }
     }
+    product.quantity = 1
+    newCart.push(product)
     setCart(newCart)
   }
 
